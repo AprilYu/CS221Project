@@ -9,7 +9,6 @@ def import_data(filename):
 			line_as_dict = json.loads(line)
 			if line_as_dict['type'] == 'business' and 'Stanford University' in line_as_dict['schools']:
 				data.append(line_as_dict)
-			if line_as_dict['type'] == 'business':
 				for item in line_as_dict['categories']:
 					business_categories.add(item)
 	return (business_cateogires, data)
