@@ -12,7 +12,7 @@ def import_data(filename):
 			if line_as_dict['type'] == 'business':
 				for item in line_as_dict['categories']:
 					business_categories.add(item)
-	return data
+	return (business_cateogires, data)
 
 def write_list_to_file(json_as_list, stanford_file):
 	for item in json_as_list:
